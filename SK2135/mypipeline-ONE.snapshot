@@ -1,0 +1,25 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "funnels" : [ ],
+    "identifier" : "c2b3927e-307e-3aad-a12c-6380810450b9",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "name" : "SK2135",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 1402.044189453125,
+      "y" : 606.4496154785156
+    },
+    "processGroups" : [ ],
+    "processors" : [ ],
+    "remoteProcessGroups" : [ ],
+    "variables" : { }
+  }
+}
