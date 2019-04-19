@@ -8,17 +8,64 @@
     "connections" : [ ],
     "controllerServices" : [ ],
     "funnels" : [ ],
-    "identifier" : "15da6a26-d302-38ef-b7fd-467a35f8ebca",
+    "identifier" : "88bfadc9-3feb-3fb5-a4ac-caecf91cd93c",
     "inputPorts" : [ ],
     "labels" : [ ],
-    "name" : "Sample",
+    "name" : "pg_001",
     "outputPorts" : [ ],
     "position" : {
-      "x" : 436.4817248931257,
-      "y" : 227.47723746631888
+      "x" : 381.0000305175781,
+      "y" : 320.99999618530273
     },
     "processGroups" : [ ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-stateful-analysis-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "88bfadc9-3feb-3fb5-a4ac-caecf91cd93c",
+      "identifier" : "b3dc1938-5d37-3c66-b2f8-de5a53819b57",
+      "name" : "AttributeRollingWindow",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 309.4817248931257,
+        "y" : 164.47723746631888
+      },
+      "properties" : { },
+      "propertyDescriptors" : {
+        "Value to track" : {
+          "displayName" : "Value to track",
+          "identifiesControllerService" : false,
+          "name" : "Value to track",
+          "sensitive" : false
+        },
+        "Time window" : {
+          "displayName" : "Time window",
+          "identifiesControllerService" : false,
+          "name" : "Time window",
+          "sensitive" : false
+        },
+        "Sub-window length" : {
+          "displayName" : "Sub-window length",
+          "identifiesControllerService" : false,
+          "name" : "Sub-window length",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "variables" : { }
   }
