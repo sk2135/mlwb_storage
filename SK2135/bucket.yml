@@ -1,6 +1,5 @@
 flows:
   1c9b2e52-55d1-44e9-8a9e-6ec7b4fa3f34: {ver: 1, file: mypipeline-ONE.snapshot}
   4ed8b57c-8c90-462b-a693-00e3b57457a9: {ver: 2, file: mypipeline-2019.snapshot}
-  91fd0314-8ab2-436f-9446-bb00769e6cef: {ver: 1, file: AdminDelete.snapshot}
 layoutVer: 1
 bucketId: f14ef3ff-8eae-4062-9c2d-be0016862a55
