@@ -3,118 +3,26 @@
     "dataModelVersion" : "2"
   },
   "content" : {
+    "comments" : "",
     "componentType" : "PROCESS_GROUP",
-    "connections" : [ {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "7d2eadbb-d278-3eb0-a398-d3b97884e8d3",
-        "id" : "b503561c-67e1-3622-b6c7-3d43e463b24a",
-        "name" : "AttributesToJSON",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "7d2eadbb-d278-3eb0-a398-d3b97884e8d3",
-      "identifier" : "285963b7-e6f1-36ae-80b5-ea9e43c366ac",
-      "labelIndex" : 1,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "7d2eadbb-d278-3eb0-a398-d3b97884e8d3",
-        "id" : "212fa382-6129-39a2-b6a3-78f3825d14b9",
-        "name" : "AttributesToCSV",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    } ],
+    "connections" : [ ],
     "controllerServices" : [ ],
     "funnels" : [ ],
     "identifier" : "7d2eadbb-d278-3eb0-a398-d3b97884e8d3",
     "inputPorts" : [ ],
     "labels" : [ ],
-    "name" : "ChangeMe",
+    "name" : "KaziProcessGroup",
     "outputPorts" : [ ],
     "position" : {
-      "x" : 0.0,
-      "y" : 0.0
+      "x" : 88.12213134765625,
+      "y" : 23.031906127929688
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ "success" ],
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "1.9.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "7d2eadbb-d278-3eb0-a398-d3b97884e8d3",
-      "identifier" : "b503561c-67e1-3622-b6c7-3d43e463b24a",
-      "name" : "AttributesToJSON",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 394.7090198150007,
-        "y" : 231.1591222319439
-      },
-      "properties" : {
-        "Destination" : "flowfile-attribute",
-        "Null Value" : "false",
-        "Include Core Attributes" : "true"
-      },
-      "propertyDescriptors" : {
-        "attributes-to-json-regex" : {
-          "displayName" : "Attributes Regular Expression",
-          "identifiesControllerService" : false,
-          "name" : "attributes-to-json-regex",
-          "sensitive" : false
-        },
-        "Destination" : {
-          "displayName" : "Destination",
-          "identifiesControllerService" : false,
-          "name" : "Destination",
-          "sensitive" : false
-        },
-        "Null Value" : {
-          "displayName" : "Null Value",
-          "identifiesControllerService" : false,
-          "name" : "Null Value",
-          "sensitive" : false
-        },
-        "Attributes List" : {
-          "displayName" : "Attributes List",
-          "identifiesControllerService" : false,
-          "name" : "Attributes List",
-          "sensitive" : false
-        },
-        "Include Core Attributes" : {
-          "displayName" : "Include Core Attributes",
-          "identifiesControllerService" : false,
-          "name" : "Include Core Attributes",
-          "sensitive" : false
-        }
-      },
-      "runDurationMillis" : 0,
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.AttributesToJSON",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ ],
       "bulletinLevel" : "WARN",
       "bundle" : {
-        "artifact" : "nifi-standard-nar",
+        "artifact" : "nifi-cdc-mysql-nar",
         "group" : "org.apache.nifi",
         "version" : "1.9.0"
       },
@@ -123,54 +31,122 @@
       "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "ALL",
       "groupIdentifier" : "7d2eadbb-d278-3eb0-a398-d3b97884e8d3",
-      "identifier" : "212fa382-6129-39a2-b6a3-78f3825d14b9",
-      "name" : "AttributesToCSV",
+      "identifier" : "afd05512-47ac-354b-a93c-e31770f91d60",
+      "name" : "CaptureChangeMySQL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 0.7090198150007154,
-        "y" : 12.159122231943911
+        "x" : 7.709019815000715,
+        "y" : -39.84087776805609
       },
       "properties" : {
-        "null-value" : "false",
-        "include-core-attributes" : "true",
-        "destination" : "flowfile-attribute",
-        "include-schema" : "false"
+        "capture-change-mysql-include-ddl-events" : "false",
+        "capture-change-mysql-driver-class" : "com.mysql.jdbc.Driver",
+        "capture-change-mysql-include-begin-commit" : "false",
+        "capture-change-mysql-retrieve-all-records" : "true",
+        "capture-change-mysql-state-update-interval" : "0 seconds",
+        "capture-change-mysql-max-wait-time" : "30 seconds"
       },
       "propertyDescriptors" : {
-        "null-value" : {
-          "displayName" : "Null Value",
+        "capture-change-mysql-include-ddl-events" : {
+          "displayName" : "Include DDL Events",
           "identifiesControllerService" : false,
-          "name" : "null-value",
+          "name" : "capture-change-mysql-include-ddl-events",
           "sensitive" : false
         },
-        "include-core-attributes" : {
-          "displayName" : "Include Core Attributes",
+        "capture-change-mysql-db-name-pattern" : {
+          "displayName" : "Database/Schema Name Pattern",
           "identifiesControllerService" : false,
-          "name" : "include-core-attributes",
+          "name" : "capture-change-mysql-db-name-pattern",
           "sensitive" : false
         },
-        "attributes-regex" : {
-          "displayName" : "Attributes Regular Expression",
-          "identifiesControllerService" : false,
-          "name" : "attributes-regex",
+        "capture-change-mysql-dist-map-cache-client" : {
+          "displayName" : "Distributed Map Cache Client",
+          "identifiesControllerService" : true,
+          "name" : "capture-change-mysql-dist-map-cache-client",
           "sensitive" : false
         },
-        "destination" : {
-          "displayName" : "Destination",
+        "capture-change-mysql-init-seq-id" : {
+          "displayName" : "Initial Sequence ID",
           "identifiesControllerService" : false,
-          "name" : "destination",
+          "name" : "capture-change-mysql-init-seq-id",
           "sensitive" : false
         },
-        "include-schema" : {
-          "displayName" : "Include Schema",
+        "capture-change-mysql-name-pattern" : {
+          "displayName" : "Table Name Pattern",
           "identifiesControllerService" : false,
-          "name" : "include-schema",
+          "name" : "capture-change-mysql-name-pattern",
           "sensitive" : false
         },
-        "attribute-list" : {
-          "displayName" : "Attribute List",
+        "capture-change-mysql-driver-class" : {
+          "displayName" : "MySQL Driver Class Name",
           "identifiesControllerService" : false,
-          "name" : "attribute-list",
+          "name" : "capture-change-mysql-driver-class",
+          "sensitive" : false
+        },
+        "capture-change-mysql-driver-locations" : {
+          "displayName" : "MySQL Driver Location(s)",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-driver-locations",
+          "sensitive" : false
+        },
+        "capture-change-mysql-include-begin-commit" : {
+          "displayName" : "Include Begin/Commit Events",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-include-begin-commit",
+          "sensitive" : false
+        },
+        "capture-change-mysql-server-id" : {
+          "displayName" : "Server ID",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-server-id",
+          "sensitive" : false
+        },
+        "capture-change-mysql-init-binlog-filename" : {
+          "displayName" : "Initial Binlog Filename",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-init-binlog-filename",
+          "sensitive" : false
+        },
+        "capture-change-mysql-init-binlog-position" : {
+          "displayName" : "Initial Binlog Position",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-init-binlog-position",
+          "sensitive" : false
+        },
+        "capture-change-mysql-hosts" : {
+          "displayName" : "MySQL Hosts",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-hosts",
+          "sensitive" : false
+        },
+        "capture-change-mysql-username" : {
+          "displayName" : "Username",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-username",
+          "sensitive" : false
+        },
+        "capture-change-mysql-retrieve-all-records" : {
+          "displayName" : "Retrieve All Records",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-retrieve-all-records",
+          "sensitive" : false
+        },
+        "capture-change-mysql-state-update-interval" : {
+          "displayName" : "State Update Interval",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-state-update-interval",
+          "sensitive" : false
+        },
+        "capture-change-mysql-password" : {
+          "displayName" : "Password",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-password",
+          "sensitive" : false
+        },
+        "capture-change-mysql-max-wait-time" : {
+          "displayName" : "Max Wait Time",
+          "identifiesControllerService" : false,
+          "name" : "capture-change-mysql-max-wait-time",
           "sensitive" : false
         }
       },
@@ -178,7 +154,7 @@
       "schedulingPeriod" : "0 sec",
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
-      "type" : "org.apache.nifi.processors.standard.AttributesToCSV",
+      "type" : "org.apache.nifi.cdc.mysql.processors.CaptureChangeMySQL",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
