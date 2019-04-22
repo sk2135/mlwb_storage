@@ -1,6 +1,5 @@
 flows:
   c1fc09e6-066c-47ab-abfb-bd59f982c0e0: {ver: 1, file: mypipeline-04192019-02.snapshot}
-  22705811-0993-417c-94cf-d87a67c89006: {ver: 1, file: mypipeline-04192019-01.snapshot}
   5eef52f6-dfe4-47b4-85a9-192f35ed990a: {ver: 4, file: kazi-pipeline.snapshot}
   7e5504b9-5c45-4437-bced-f035e1517eaf: {ver: 1, file: mypipeline-THREE.snapshot}
 layoutVer: 1
