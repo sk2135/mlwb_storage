@@ -3,16 +3,85 @@
     "dataModelVersion" : "2"
   },
   "content" : {
+    "comments" : "",
     "componentType" : "PROCESS_GROUP",
     "connections" : [ ],
     "controllerServices" : [ ],
     "funnels" : [ ],
+    "identifier" : "fb162ac7-9f3a-3786-bdb2-6b9e7239883b",
     "inputPorts" : [ ],
     "labels" : [ ],
-    "name" : "ChangeMe",
+    "name" : "MyProcessGroup",
     "outputPorts" : [ ],
-    "processGroups" : [ ],
-    "processors" : [ ],
+    "position" : {
+      "x" : 240.99996948242188,
+      "y" : 215.0
+    },
+    "processGroups" : [ {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "funnels" : [ ],
+      "groupIdentifier" : "fb162ac7-9f3a-3786-bdb2-6b9e7239883b",
+      "identifier" : "7e750bb2-a7a4-3fd9-a9e9-281b9043cf80",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "name" : "pg-02",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : 331.45755344696227,
+        "y" : 14.47312244679074
+      },
+      "processGroups" : [ ],
+      "processors" : [ ],
+      "remoteProcessGroups" : [ ],
+      "variables" : { }
+    } ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "success" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "fb162ac7-9f3a-3786-bdb2-6b9e7239883b",
+      "identifier" : "55f132c5-f9f1-3002-b9e9-4d97e73a5866",
+      "name" : "CalculateRecordStats",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 271.45755344696227,
+        "y" : 224.47312244679074
+      },
+      "properties" : {
+        "record-stats-limit" : "10"
+      },
+      "propertyDescriptors" : {
+        "record-stats-limit" : {
+          "displayName" : "record-stats-limit",
+          "identifiesControllerService" : false,
+          "name" : "record-stats-limit",
+          "sensitive" : false
+        },
+        "record-stats-reader" : {
+          "displayName" : "Record Reader",
+          "identifiesControllerService" : true,
+          "name" : "record-stats-reader",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.CalculateRecordStats",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "variables" : { }
   }
