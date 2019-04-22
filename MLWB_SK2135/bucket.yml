@@ -4,6 +4,5 @@ flows:
   799bce1c-1361-44ee-a736-a3d1ae9d34b2: {ver: 1, file: CSV2AVRO.snapshot}
   7a3e5f2b-1f77-41b4-9a69-125b5894a5a2: {ver: 1, file: test.snapshot}
   f88efca5-235b-450c-b085-1eec681fb38f: {ver: 1, file: TestFlow_PG_03_Today.snapshot}
-  444f4609-72db-479a-ac8b-ab6011f14902: {ver: 1, file: MyFlow_Demo_Today_04_03.snapshot}
 layoutVer: 1
 bucketId: 21f043e1-c1c9-4136-9e80-6b5f132ef80f
