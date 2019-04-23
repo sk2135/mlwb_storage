@@ -7,12 +7,54 @@
     "connections" : [ ],
     "controllerServices" : [ ],
     "funnels" : [ ],
+    "identifier" : "e4071a58-d1ad-313c-8690-5c698a4ae9ce",
     "inputPorts" : [ ],
     "labels" : [ ],
     "name" : "ChangeMe",
     "outputPorts" : [ ],
+    "position" : {
+      "x" : 326.9051513671875,
+      "y" : 180.49974060058594
+    },
     "processGroups" : [ ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "e4071a58-d1ad-313c-8690-5c698a4ae9ce",
+      "identifier" : "ef1b3ae1-a0b3-3bbb-96da-72256cdce61e",
+      "name" : "Base64EncodeContent",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 196.27756818900428,
+        "y" : 6.215396983602517
+      },
+      "properties" : {
+        "Mode" : "Encode"
+      },
+      "propertyDescriptors" : {
+        "Mode" : {
+          "displayName" : "Mode",
+          "identifiesControllerService" : false,
+          "name" : "Mode",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 25,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.Base64EncodeContent",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "variables" : { }
   }
