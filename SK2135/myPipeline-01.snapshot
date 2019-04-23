@@ -16,7 +16,97 @@
       "x" : 326.9051513671875,
       "y" : 180.49974060058594
     },
-    "processGroups" : [ ],
+    "processGroups" : [ {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "funnels" : [ ],
+      "groupIdentifier" : "e4071a58-d1ad-313c-8690-5c698a4ae9ce",
+      "identifier" : "13ffcc54-95e2-38df-afef-5645358120f1",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "name" : "pg-01",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : 269.2775681890043,
+        "y" : 270.21539698360255
+      },
+      "processGroups" : [ ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "13ffcc54-95e2-38df-afef-5645358120f1",
+        "identifier" : "13fbb8b3-c99d-3e60-ab25-ad7ec29a58c9",
+        "name" : "AttributesToCSV",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 83.27756818900428,
+          "y" : 20.215396983602517
+        },
+        "properties" : {
+          "null-value" : "false",
+          "include-core-attributes" : "true",
+          "destination" : "flowfile-attribute",
+          "include-schema" : "false"
+        },
+        "propertyDescriptors" : {
+          "null-value" : {
+            "displayName" : "Null Value",
+            "identifiesControllerService" : false,
+            "name" : "null-value",
+            "sensitive" : false
+          },
+          "include-core-attributes" : {
+            "displayName" : "Include Core Attributes",
+            "identifiesControllerService" : false,
+            "name" : "include-core-attributes",
+            "sensitive" : false
+          },
+          "attributes-regex" : {
+            "displayName" : "Attributes Regular Expression",
+            "identifiesControllerService" : false,
+            "name" : "attributes-regex",
+            "sensitive" : false
+          },
+          "destination" : {
+            "displayName" : "Destination",
+            "identifiesControllerService" : false,
+            "name" : "destination",
+            "sensitive" : false
+          },
+          "include-schema" : {
+            "displayName" : "Include Schema",
+            "identifiesControllerService" : false,
+            "name" : "include-schema",
+            "sensitive" : false
+          },
+          "attribute-list" : {
+            "displayName" : "Attribute List",
+            "identifiesControllerService" : false,
+            "name" : "attribute-list",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.AttributesToCSV",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "variables" : { }
+    } ],
     "processors" : [ {
       "autoTerminatedRelationships" : [ "success", "failure" ],
       "bulletinLevel" : "WARN",
